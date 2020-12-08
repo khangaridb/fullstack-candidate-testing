@@ -10,7 +10,6 @@ Built rest api with Node.js + MongoDB
 2. [Install yarn package manager](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
 3. [Install MongoDB](https://docs.mongodb.com/manual/installation/)
 
-
 Install client packages
 
 ```
@@ -18,6 +17,7 @@ cd client && yarn install
 ```
 
 Install api packages
+
 ```
 cd api && yarn install
 ```
@@ -25,16 +25,25 @@ cd api && yarn install
 ## Instructions
 
 Run client on development environment
+
 ```
 cd client && yarn start
 ```
 
+Init db
+
+```
+cd api && yarn initDb
+```
+
 Run api on development environment
+
 ```
 cd api && yarn dev
 ```
 
 Run tests on api
+
 ```
 cd api && yarn test
 ```
