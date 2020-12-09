@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node dist",
+    "start": "node src/index.js",
     "dev": "nodemon --exec babel-node src/index.js",
     "initDb": "babel-node --experimental-modules src/initDb.js",
     "test": "jest --testPathPattern=__tests__"
