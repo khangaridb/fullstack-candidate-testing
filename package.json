@@ -8,7 +8,6 @@
     "start": "node src/index.js",
     "dev": "nodemon --exec babel-node src/index.js",
     "initDb": "babel-node --experimental-modules src/initDb.js",
-    "heroku-postbuild": "cd client && yarn && yarn build",
     "test": "jest --testPathPattern=__tests__"
   },
   "dependencies": {

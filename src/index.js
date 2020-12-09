@@ -5,15 +5,11 @@ import dotenv from 'dotenv';
 import { connectDb } from './dbConnection';
 import routes from './controllers';
 
-const path = require('path');
-
 connectDb();
 
 dotenv.config();
 
 const app = express();
-
-app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.use(cors());
 
