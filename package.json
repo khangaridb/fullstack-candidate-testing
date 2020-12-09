@@ -1,41 +1,41 @@
 {
-  "name": "client",
-  "version": "0.1.0",
+  "name": "express-rest-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "private": true,
-  "dependencies": {
-    "axios": "^0.21.0",
-    "bootstrap": "^4.5.3",
-    "http-proxy-middleware": "^1.0.6",
-    "moment": "^2.29.1",
-    "query-string": "^6.13.7",
-    "react": "^17.0.1",
-    "react-bootstrap": "^1.4.0",
-    "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
-    "use-debounce": "^5.1.0"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && (cd server && yarn install)",
-    "eject": "react-scripts eject"
+    "start": "node src/index.js",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "initDb": "babel-node --experimental-modules src/initDb.js",
+    "heroku-postbuild": "cd client && yarn && yarn build",
+    "test": "jest --testPathPattern=__tests__"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.4"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@shelf/jest-mongodb": "^1.2.3",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.2.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1"
+  },
+  "type": "commonjs",
+  "jest": {
+    "testEnvironment": "node"
   }
 }
