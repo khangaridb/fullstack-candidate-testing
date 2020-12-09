@@ -4,6 +4,6 @@ import jobRoute from './job';
 
 const router = express.Router();
 
-router.use('/api/job', jobRoute);
+router.use('/job', jobRoute);
 
 export default router;
