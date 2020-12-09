@@ -1,12 +1,13 @@
-import React from "react";
-import { Card, Col, Modal, Nav, Row } from "react-bootstrap";
-import services from "../services";
+/* eslint:disable */
+import React from 'react';
+import { Card, Col, Modal, Nav, Row } from 'react-bootstrap';
+import services from '../services';
 
 const Sidenav = () => {
   const [filters, setFilters] = React.useState({});
 
   const [show, setShow] = React.useState(false);
-  const [modalTitle, setModalTitle] = React.useState("");
+  const [modalTitle, setModalTitle] = React.useState('');
 
   const handleClose = () => setShow(false);
 
@@ -34,7 +35,7 @@ const Sidenav = () => {
           </Card.Body>
         </Card>
 
-        <Card style={{ marginTop: "20px" }}>
+        <Card style={{ marginTop: '20px' }}>
           <Card.Body>
             <Card.Title>
               <span>DEPARTMENT</span>
@@ -52,16 +53,16 @@ const Sidenav = () => {
               <Card.Text
                 onClick={() => {
                   setShow(true);
-                  setModalTitle("department");
+                  setModalTitle('department');
                 }}
               >
-                <span style={{ cursor: "pointer" }}>show more</span>
+                <span style={{ cursor: 'pointer' }}>show more</span>
               </Card.Text>
             )}
           </Card.Body>
         </Card>
 
-        <Card style={{ marginTop: "20px" }}>
+        <Card style={{ marginTop: '20px' }}>
           <Card.Body>
             <Card.Title>
               <span>WORK SCHEDULE</span>
@@ -76,7 +77,7 @@ const Sidenav = () => {
           </Card.Body>
         </Card>
 
-        <Card style={{ marginTop: "20px", marginBottom: "20px" }}>
+        <Card style={{ marginTop: '20px', marginBottom: '20px' }}>
           <Card.Body>
             <Card.Title>
               <span>EXPERIENCE</span>
