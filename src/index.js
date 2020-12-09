@@ -20,9 +20,7 @@ app.use(bodyParser.json());
 // init routes
 app.use('/', routes);
 
-const { PORT = 3100 } = process.env;
-
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   // eslint-disable-next-line
   console.log(`server is running on port ${PORT}`);
 });
