@@ -11,6 +11,9 @@ dotenv.config();
 
 const app = express();
 
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
+
 app.use(cors());
 
 // Configuring body parser middleware
@@ -20,7 +23,7 @@ app.use(bodyParser.json());
 // init routes
 app.use('/', routes);
 
-const { PORT } = process.env;
+const { PORT = 3100 } = process.env;
 
 app.listen(PORT, () => {
   // eslint-disable-next-line
