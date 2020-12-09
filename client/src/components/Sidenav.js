@@ -1,4 +1,4 @@
-/* eslint:disable */
+/* eslint-disable */
 import React from 'react';
 import { Card, Col, Modal, Nav, Row } from 'react-bootstrap';
 import services from '../services';
