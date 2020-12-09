@@ -5,6 +5,8 @@ import dotenv from 'dotenv';
 import { connectDb } from './dbConnection';
 import routes from './controllers';
 
+const path = require('path');
+
 connectDb();
 
 dotenv.config();
@@ -12,6 +14,7 @@ dotenv.config();
 const app = express();
 
 const buildPath = path.join(__dirname, '../..', 'build');
+console.log(buildPath);
 app.use(express.static(buildPath));
 
 app.use(cors());
