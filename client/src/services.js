@@ -1,7 +1,7 @@
-import axios from "axios";
+import axios from 'axios';
 
 const getJobs = (q, location, department, role, experience) => {
-  let query = "/api/job/list";
+  let query = 'https://fathomless-coast-70530.herokuapp.com//job/list';
 
   if (q) {
     query += `?q=${q}`;
@@ -36,7 +36,7 @@ const getJobs = (q, location, department, role, experience) => {
 const getFilters = (requestDetailId) => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`/api/job/getFilters`)
+      .get(`https://fathomless-coast-70530.herokuapp.com//job/getFilters`)
       .then((response) => {
         resolve(response.data);
       })
@@ -45,7 +45,7 @@ const getFilters = (requestDetailId) => {
 };
 
 const getTotalCount = (q) => {
-  let query = "/api/job/totalCount";
+  let query = 'https://fathomless-coast-70530.herokuapp.com//job/totalCount';
 
   if (q) {
     query += `?q=${q}`;
@@ -64,7 +64,7 @@ const getTotalCount = (q) => {
 const services = {
   getJobs,
   getFilters,
-  getTotalCount,
+  getTotalCount
 };
 
 export default services;
